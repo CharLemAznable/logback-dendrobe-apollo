@@ -13,6 +13,7 @@ import java.util.Properties;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import static com.github.charlemaznable.core.lang.Propertiess.parseStringToProperties;
+import static com.google.common.collect.Sets.newHashSet;
 import static java.util.concurrent.Executors.newFixedThreadPool;
 
 @AutoService(HotUpdater.class)
@@ -66,10 +67,8 @@ public final class ApolloUpdater implements HotUpdater {
             val apolloConfig = ConfigService.getConfig(namespace);
             accept(apolloConfig.getProperty(propertyName, ""));
 
-            apolloConfig.addChangeListener(changeEvent -> {
-                if (!changeEvent.changedKeys().contains(propertyName)) return;
-                accept(changeEvent.getChange(propertyName).getNewValue());
-            });
+            apolloConfig.addChangeListener(e ->
+                    accept(e.getChange(propertyName).getNewValue()), newHashSet(propertyName));
         }).start();
     }
 
