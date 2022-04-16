@@ -7,11 +7,11 @@
     <parent>
         <groupId>com.github.charlemaznable</groupId>
         <artifactId>char-dependencies</artifactId>
-        <version>0.0.8-SNAPSHOT</version>
+        <version>0.0.9-SNAPSHOT</version>
     </parent>
 
     <artifactId>logback-dendrobe-apollo</artifactId>
-    <version>0.1.8-SNAPSHOT</version>
+    <version>0.1.9-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Logback Dendrobe Apollo</name>
@@ -47,12 +47,12 @@
     <properties>
         <sonar.projectKey>CharLemAznable_logback-dendrobe-apollo</sonar.projectKey>
 
-        <eql-apollo.version>0.0.8-SNAPSHOT</eql-apollo.version>
-        <es-config-elves.version>0.0.8-SNAPSHOT</es-config-elves.version>
-        <logback-dendrobe.version>0.1.8-SNAPSHOT</logback-dendrobe.version>
-        <vertx-config-elves.version>0.1.8-SNAPSHOT</vertx-config-elves.version>
+        <eql-apollo.version>0.0.9-SNAPSHOT</eql-apollo.version>
+        <es-config-elves.version>0.0.9-SNAPSHOT</es-config-elves.version>
+        <logback-dendrobe.version>0.1.9-SNAPSHOT</logback-dendrobe.version>
+        <vertx-config-elves.version>0.1.9-SNAPSHOT</vertx-config-elves.version>
 
-        <apollo-mockserver.version>0.0.8-SNAPSHOT</apollo-mockserver.version>
+        <apollo-mockserver.version>0.0.9-SNAPSHOT</apollo-mockserver.version>
     </properties>
 
     <dependencies>
