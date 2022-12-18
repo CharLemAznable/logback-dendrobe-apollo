@@ -32,18 +32,19 @@ public class EqlAppenderTest implements ApolloUpdaterListener {
     private static final String CLASS_NAME = EqlAppenderTest.class.getName();
 
     private static final String DB0 = "db0";
-    private static final String CREATE_TABLE_SIMPLE_LOG = "" +
-            "create table `simple_log` (" +
-            "  `log_id` bigint not null," +
-            "  `log_content` text," +
-            "  `log_date` datetime(3)," +
-            "  `log_date_time` datetime(3)," +
-            "  primary key (`log_id`)" +
-            ");\n";
+    private static final String CREATE_TABLE_SIMPLE_LOG = """
+            create table `simple_log` (
+              `log_id` bigint not null,
+              `log_content` text,
+              `log_date` datetime(3),
+              `log_date_time` datetime(3),
+              primary key (`log_id`)
+            );
+            """;
     private static final String SELECT_SIMPLE_LOGS = "" +
             "select log_id, log_content, log_date, log_date_time from simple_log order by log_id";
     private static final DockerImageName mysqlImageName = DockerImageName.parse("mysql:5.7.34");
-    private static MySQLContainer mysql0 = new MySQLContainer<>(mysqlImageName).withDatabaseName(DB0);
+    private static final MySQLContainer<?> mysql0 = new MySQLContainer<>(mysqlImageName).withDatabaseName(DB0);
     private static Logger root;
     private static Logger self;
     private boolean updated;
@@ -138,7 +139,7 @@ public class EqlAppenderTest implements ApolloUpdaterListener {
         assertEquals("(test||)no db log null: null", queryNoDbLogNull.getLogContent());
 
         val queryNoDbLogNotLog = simpleLogs.get(3);
-        assertEquals("(test||)no db log not log: " + notLog.toString(), queryNoDbLogNotLog.getLogContent());
+        assertEquals("(test||)no db log not log: " + notLog, queryNoDbLogNotLog.getLogContent());
 
         ApolloUpdater.removeListener(this);
     }

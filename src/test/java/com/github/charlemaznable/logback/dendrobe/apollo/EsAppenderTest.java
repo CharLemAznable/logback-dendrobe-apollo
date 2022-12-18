@@ -45,7 +45,7 @@ public class EsAppenderTest implements ApolloUpdaterListener, EsClientManagerLis
     private static final String ELASTICSEARCH_USERNAME = "elastic";
     private static final String ELASTICSEARCH_PASSWORD = "changeme";
 
-    private static ElasticsearchContainer elasticsearch
+    private static final ElasticsearchContainer elasticsearch
             = new ElasticsearchContainer(ELASTICSEARCH_IMAGE)
             .withPassword(ELASTICSEARCH_PASSWORD);
 
