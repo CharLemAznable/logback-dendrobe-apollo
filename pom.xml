@@ -7,11 +7,11 @@
     <parent>
         <groupId>com.github.charlemaznable</groupId>
         <artifactId>char-dependencies</artifactId>
-        <version>2023.0.0-SNAPSHOT</version>
+        <version>2022.0.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>logback-dendrobe-apollo</artifactId>
-    <version>2023.0.0-SNAPSHOT</version>
+    <version>2022.0.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Logback Dendrobe Apollo</name>
@@ -47,12 +47,12 @@
     <properties>
         <sonar.projectKey>CharLemAznable_logback-dendrobe-apollo</sonar.projectKey>
 
-        <eql-apollo.version>2023.0.0-SNAPSHOT</eql-apollo.version>
-        <es-config-elves.version>2023.0.0-SNAPSHOT</es-config-elves.version>
-        <logback-dendrobe.version>2023.0.0-SNAPSHOT</logback-dendrobe.version>
-        <vertx-config-elves.version>2023.0.0-SNAPSHOT</vertx-config-elves.version>
+        <eql-apollo.version>2022.0.3-SNAPSHOT</eql-apollo.version>
+        <es-config-elves.version>2022.0.3-SNAPSHOT</es-config-elves.version>
+        <logback-dendrobe.version>2022.0.3-SNAPSHOT</logback-dendrobe.version>
+        <vertx-config-elves.version>2022.0.3-SNAPSHOT</vertx-config-elves.version>
 
-        <apollo-mockserver.version>2023.0.0-SNAPSHOT</apollo-mockserver.version>
+        <apollo-mockserver.version>2022.0.3-SNAPSHOT</apollo-mockserver.version>
     </properties>
 
     <dependencies>
@@ -84,13 +84,18 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-hazelcast</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
