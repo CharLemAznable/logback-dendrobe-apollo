@@ -57,6 +57,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.github.charlemaznable</groupId>
             <artifactId>eql-apollo</artifactId>
             <version>${eql-apollo.version}</version>
