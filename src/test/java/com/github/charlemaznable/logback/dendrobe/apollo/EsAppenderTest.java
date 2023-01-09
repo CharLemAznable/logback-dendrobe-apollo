@@ -25,7 +25,7 @@ import java.util.Properties;
 
 import static com.github.charlemaznable.core.es.EsClientElf.buildElasticsearchClient;
 import static com.github.charlemaznable.core.es.EsClientElf.closeElasticsearchApiClient;
-import static com.github.charlemaznable.es.config.EsConfigElf.ES_CONFIG_APOLLO_NAMESPACE;
+import static com.github.charlemaznable.core.es.EsConfigElf.ES_CONFIG_APOLLO_NAMESPACE;
 import static com.google.common.collect.Lists.newArrayList;
 import static org.awaitility.Awaitility.await;
 import static org.junit.jupiter.api.Assertions.assertEquals;

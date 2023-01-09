@@ -22,8 +22,8 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 import java.util.Properties;
 
-import static com.github.charlemaznable.vertx.config.VertxClusterConfigElf.VERTX_CLUSTER_CONFIG_APOLLO_NAMESPACE;
-import static com.github.charlemaznable.vertx.config.VertxOptionsConfigElf.VERTX_OPTIONS_APOLLO_NAMESPACE;
+import static com.github.charlemaznable.core.vertx.VertxClusterConfigElf.VERTX_CLUSTER_CONFIG_APOLLO_NAMESPACE;
+import static com.github.charlemaznable.core.vertx.VertxOptionsConfigElf.VERTX_OPTIONS_APOLLO_NAMESPACE;
 import static org.awaitility.Awaitility.await;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
