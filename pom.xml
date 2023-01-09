@@ -48,9 +48,7 @@
         <sonar.projectKey>CharLemAznable_logback-dendrobe-apollo</sonar.projectKey>
 
         <eql-apollo.version>2022.0.3-SNAPSHOT</eql-apollo.version>
-        <es-config-elves.version>2022.0.3-SNAPSHOT</es-config-elves.version>
         <logback-dendrobe.version>2022.0.3-SNAPSHOT</logback-dendrobe.version>
-        <vertx-config-elves.version>2022.0.3-SNAPSHOT</vertx-config-elves.version>
 
         <apollo-mockserver.version>2022.0.3-SNAPSHOT</apollo-mockserver.version>
     </properties>
@@ -67,18 +65,8 @@
         </dependency>
         <dependency>
             <groupId>com.github.charlemaznable</groupId>
-            <artifactId>es-config-elves</artifactId>
-            <version>${es-config-elves.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.charlemaznable</groupId>
             <artifactId>logback-dendrobe</artifactId>
             <version>${logback-dendrobe.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.charlemaznable</groupId>
-            <artifactId>vertx-config-elves</artifactId>
-            <version>${vertx-config-elves.version}</version>
         </dependency>
 
         <dependency>
