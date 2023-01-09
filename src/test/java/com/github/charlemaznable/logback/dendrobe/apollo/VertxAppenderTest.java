@@ -82,7 +82,7 @@ public class VertxAppenderTest implements ApolloUpdaterListener, VertxManagerLis
                 "        enabled: true\n");
         MockApolloServer.addOrModifyProperty(VERTX_OPTIONS_APOLLO_NAMESPACE, "DEFAULT", "" +
                 "workerPoolSize=42\n" +
-                "clusterManager=@com.github.charlemaznable.vertx.config.ApolloHazelcastClusterManager(DEFAULT)\n");
+                "clusterManager=@com.github.charlemaznable.core.vertx.cluster.impl.ApolloHazelcastClusterManager(DEFAULT)\n");
         MockApolloServer.addOrModifyProperty("Logback", "test", "" +
                 "root[console.level]=info\n" +
                 CLASS_NAME + "[appenders]=[vertx]\n" +
