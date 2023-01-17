@@ -1,6 +1,6 @@
 package com.github.charlemaznable.logback.dendrobe.apollo;
 
-import com.github.charlemaznable.es.config.EsConfigElf;
+import com.github.charlemaznable.core.es.EsConfigElf;
 import com.github.charlemaznable.logback.dendrobe.es.EsConfigService;
 import com.github.charlemaznable.logback.dendrobe.impl.DefaultEsConfigService;
 import com.google.auto.service.AutoService;

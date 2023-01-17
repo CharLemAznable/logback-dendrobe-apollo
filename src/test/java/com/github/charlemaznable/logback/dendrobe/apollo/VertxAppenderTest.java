@@ -22,8 +22,8 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 import java.util.Properties;
 
-import static com.github.charlemaznable.vertx.config.VertxClusterConfigElf.VERTX_CLUSTER_CONFIG_APOLLO_NAMESPACE;
-import static com.github.charlemaznable.vertx.config.VertxOptionsConfigElf.VERTX_OPTIONS_APOLLO_NAMESPACE;
+import static com.github.charlemaznable.core.vertx.VertxClusterConfigElf.VERTX_CLUSTER_CONFIG_APOLLO_NAMESPACE;
+import static com.github.charlemaznable.core.vertx.VertxOptionsConfigElf.VERTX_OPTIONS_APOLLO_NAMESPACE;
 import static org.awaitility.Awaitility.await;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -83,7 +83,7 @@ public class VertxAppenderTest implements ApolloUpdaterListener, VertxManagerLis
                 """);
         MockApolloServer.addOrModifyProperty(VERTX_OPTIONS_APOLLO_NAMESPACE, "DEFAULT", """
                 workerPoolSize=42
-                clusterManager=@com.github.charlemaznable.vertx.config.ApolloHazelcastClusterManager(DEFAULT)
+                clusterManager=@com.github.charlemaznable.core.vertx.cluster.impl.ApolloHazelcastClusterManager(DEFAULT)
                 """);
         MockApolloServer.addOrModifyProperty("Logback", "test", "" +
                 "root[console.level]=info\n" +
@@ -99,7 +99,7 @@ public class VertxAppenderTest implements ApolloUpdaterListener, VertxManagerLis
         root.info("root vertx log {}", "old");
         self.info("self vertx log {}", "old");
         await().timeout(Duration.ofSeconds(20)).untilAsserted(() ->
-            assertEquals("self vertx log old", lastEventMessage));
+                assertEquals("self vertx log old", lastEventMessage));
 
         VertxManager.removeListener(this);
         ApolloUpdater.removeListener(this);
