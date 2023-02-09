@@ -97,7 +97,7 @@ public class VertxAppenderTest implements ApolloUpdaterListener, VertxManagerLis
         root.info("root vertx log {}", "old");
         self.info("self vertx log {}", "old");
         await().timeout(Duration.ofSeconds(20)).untilAsserted(() ->
-            assertEquals("self vertx log old", lastEventMessage));
+                assertEquals("self vertx log old", lastEventMessage));
 
         VertxManager.removeListener(this);
         ApolloUpdater.removeListener(this);
