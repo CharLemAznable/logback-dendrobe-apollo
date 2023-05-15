@@ -7,11 +7,11 @@
     <parent>
         <groupId>com.github.charlemaznable</groupId>
         <artifactId>char-dependencies</artifactId>
-        <version>2023.1.1-SNAPSHOT</version>
+        <version>2023.1.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>logback-dendrobe-apollo</artifactId>
-    <version>2023.1.1-SNAPSHOT</version>
+    <version>2023.1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Logback Dendrobe Apollo</name>
@@ -47,10 +47,10 @@
     <properties>
         <sonar.projectKey>CharLemAznable_logback-dendrobe-apollo</sonar.projectKey>
 
-        <eql-apollo.version>2023.1.1-SNAPSHOT</eql-apollo.version>
-        <logback-dendrobe.version>2023.1.1-SNAPSHOT</logback-dendrobe.version>
+        <eql-apollo.version>2023.1.2-SNAPSHOT</eql-apollo.version>
+        <logback-dendrobe.version>2023.1.2-SNAPSHOT</logback-dendrobe.version>
 
-        <apollo-mockserver.version>2023.1.1-SNAPSHOT</apollo-mockserver.version>
+        <apollo-mockserver.version>2023.1.2-SNAPSHOT</apollo-mockserver.version>
     </properties>
 
     <dependencies>
