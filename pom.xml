@@ -47,7 +47,7 @@
     <properties>
         <sonar.projectKey>CharLemAznable_logback-dendrobe-apollo</sonar.projectKey>
 
-        <eql-apollo.version>2023.1.2-SNAPSHOT</eql-apollo.version>
+        <eql-extension.version>2023.1.2-SNAPSHOT</eql-extension.version>
         <logback-dendrobe.version>2023.1.2-SNAPSHOT</logback-dendrobe.version>
 
         <apollo-mockserver.version>2023.1.2-SNAPSHOT</apollo-mockserver.version>
@@ -60,8 +60,8 @@
         </dependency>
         <dependency>
             <groupId>com.github.charlemaznable</groupId>
-            <artifactId>eql-apollo</artifactId>
-            <version>${eql-apollo.version}</version>
+            <artifactId>eql-extension</artifactId>
+            <version>${eql-extension.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.charlemaznable</groupId>
