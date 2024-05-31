@@ -68,10 +68,8 @@ public class EsAppenderTest implements ApolloUpdaterListener, EsClientManagerLis
         esConfig.setPassword(ELASTICSEARCH_PASSWORD);
         esClient = buildElasticsearchClient(esConfig);
 
-        val createIndexRequest = CreateIndexRequest.of(builder -> builder.index("logback.apollo"));
-        val createIndexResponse = esClient.indices().create(createIndexRequest);
-        val openIndexRequest = OpenRequest.of(builder -> builder.index("logback.apollo"));
-        val openIndexResponse = esClient.indices().open(openIndexRequest);
+        esClient.indices().create(CreateIndexRequest.of(builder -> builder.index("logback.apollo")));
+        esClient.indices().open(OpenRequest.of(builder -> builder.index("logback.apollo")));
 
         root = LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
         self = LoggerFactory.getLogger(EsAppenderTest.class);
