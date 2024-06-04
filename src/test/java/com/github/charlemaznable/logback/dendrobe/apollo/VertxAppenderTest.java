@@ -46,8 +46,7 @@ public class VertxAppenderTest implements ApolloUpdaterListener, VertxManagerLis
         vertxOptions.setWorkerPoolSize(10);
         val hazelcastConfig = new Config();
         hazelcastConfig.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(true);
-        vertxOptions.setClusterManager(new HazelcastClusterManager(hazelcastConfig));
-        vertx = VertxElf.buildVertx(vertxOptions);
+        vertx = VertxElf.buildVertx(vertxOptions, new HazelcastClusterManager(hazelcastConfig));
         vertx.eventBus().consumer("logback.apollo",
                 (Handler<Message<JsonObject>>) event -> {
                     try {
